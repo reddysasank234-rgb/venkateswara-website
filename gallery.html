@@ -1,9 +1,106 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>Gallery - Lord Venkateswara</title>
-<link rel="stylesheet" href="style.css">
+<title>Lord Venkateswara</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#d9d5cc;
+text-align:center;
+}
+
+/* HEADER */
+header{
+background:#8B0000;
+color:white;
+padding:25px 0 10px 0;
+}
+
+header h1{
+margin:0;
+font-size:32px;
+}
+
+/* NAVIGATION */
+nav{
+margin-top:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 25px;
+font-size:18px;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* SECTION */
+section{
+padding:50px 20px;
+}
+
+/* GALLERY TITLE */
+.gallery-title{
+color:#7a0000;
+font-size:34px;
+margin-bottom:40px;
+}
+
+/* GALLERY GRID */
+.gallery{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:320px;
+border-radius:10px;
+box-shadow:0 5px 12px rgba(0,0,0,0.3);
+transition:0.3s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+justify-content:center;
+align-items:center;
+}
+
+.popup img{
+max-width:80%;
+max-height:80%;
+border-radius:10px;
+}
+
+.close{
+position:absolute;
+top:25px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+</style>
 </head>
 
 <body>
@@ -12,72 +109,42 @@
 <h1>Lord Venkateswara</h1>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="history.html">History</a>
-<a href="bhajans.html">Bhajans</a>
-<a href="gallery.html">Gallery</a>
+<a href="#">Home</a>
+<a href="#">History</a>
+<a href="#">Bhajans</a>
+<a href="#">Gallery</a>
 </nav>
 
 </header>
 
-<h2 class="page-title">Gallery</h2>
+<section>
 
-<section class="gallery">
+<h2 class="gallery-title">Gallery</h2>
 
-<img src="images/IMG_5395.JPG.jpeg" onclick="openImage(0)">
-<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg" onclick="openImage(1)">
-<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg" onclick="openImage(2)">
-<img src="images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png" onclick="openImage(3)">
+<div class="gallery">
+
+<img src="img1.jpg" onclick="openImg(this.src)">
+<img src="img2.jpg" onclick="openImg(this.src)">
+<img src="img3.jpg" onclick="openImg(this.src)">
+
+</div>
 
 </section>
 
-<div class="lightbox" id="lightbox">
-
-<span class="close" onclick="closeImage()">✖</span>
-
-<span class="prev" onclick="prevImage()">❮</span>
-
-<img id="lightbox-img">
-
-<span class="next" onclick="nextImage()">❯</span>
-
+<div class="popup" id="popup">
+<span class="close" onclick="closeImg()">×</span>
+<img id="popupImg">
 </div>
 
 <script>
 
-let images = [
-"images/IMG_5395.JPG.jpeg",
-"images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg",
-"images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg",
-"images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png"
-];
-
-let current = 0;
-
-function openImage(index){
-current = index;
-document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src = images[current];
+function openImg(src){
+document.getElementById("popup").style.display="flex";
+document.getElementById("popupImg").src=src;
 }
 
-function closeImage(){
-document.getElementById("lightbox").style.display="none";
-}
-
-function nextImage(){
-current++;
-if(current >= images.length){
-current = 0;
-}
-document.getElementById("lightbox-img").src = images[current];
-}
-
-function prevImage(){
-current--;
-if(current < 0){
-current = images.length - 1;
-}
-document.getElementById("lightbox-img").src = images[current];
+function closeImg(){
+document.getElementById("popup").style.display="none";
 }
 
 </script>
