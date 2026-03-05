@@ -1,26 +1,49 @@
-body {
-    font-family: Arial;
-    background-color: #f4f1e6;
-    text-align: center;
+body{
+font-family: Arial;
+margin:0;
+background:#f5f2e9;
+text-align:center;
 }
 
-header {
-    background-color: #7b1113;
-    color: white;
-    padding: 20px;
+header{
+background:#7b1113;
+color:white;
+padding:20px;
 }
 
-.about, .gallery {
-    margin: 30px;
+nav{
+background:#d4af37;
+padding:10px;
 }
 
-img {
-    border-radius: 15px;
-    margin-top: 15px;
+nav a{
+margin:15px;
+text-decoration:none;
+color:black;
+font-weight:bold;
 }
 
-footer {
-    background-color: #7b1113;
-    color: white;
-    padding: 10px;
+section{
+margin:40px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+img{
+width:250px;
+margin:10px;
+border-radius:10px;
+}
+
+iframe{
+margin-top:20px;
+}
+
+footer{
+background:#7b1113;
+color:white;
+padding:15px;
+margin-top:40px;
 }
