@@ -1,36 +1,149 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>Home - Lord Venkateswara</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Lord Venkateswara</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:#d6d2c8;
+text-align:center;
+}
+
+/* HEADER */
+header{
+background:#8B0000;
+color:white;
+padding:25px 0;
+}
+
+header h1{
+margin:0;
+font-size:32px;
+}
+
+/* NAVIGATION */
+nav{
+background:#8B0000;
+padding:10px 0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 25px;
+font-size:18px;
+}
+
+nav a:hover{
+text-decoration:underline;
+}
+
+/* PAGE SECTION */
+section{
+padding:40px 20px;
+}
+
+/* GALLERY */
+.gallery{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.gallery img{
+width:320px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+cursor:pointer;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* IMAGE POPUP */
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+}
+
+.popup img{
+max-width:80%;
+max-height:80%;
+border-radius:10px;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
 <h1>Lord Venkateswara</h1>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="history.html">History</a>
-<a href="bhajans.html">Bhajans</a>
-<a href="gallery.html">Gallery</a>
-</nav>
-
 </header>
 
-<h2 class="page-title">Home</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#">History</a>
+<a href="#">Bhajans</a>
+<a href="#">Gallery</a>
+</nav>
 
-<div class="content">
+<section>
 
-<p>Welcome to the divine website of Lord Venkateswara.</p>
+<h1 style="color:#7a0000;">Gallery</h1>
 
-<p>Lord Venkateswara, also known as Balaji, is worshipped at Tirumala in Andhra Pradesh.</p>
+<div class="gallery">
 
-<img src="images/IMG_5395.JPG.jpeg" class="home-image">
+<img src="img1.jpg" onclick="openImg(this.src)">
+<img src="img2.jpg" onclick="openImg(this.src)">
+<img src="img3.jpg" onclick="openImg(this.src)">
 
 </div>
+
+</section>
+
+<!-- IMAGE POPUP -->
+<div class="popup" id="popup">
+<span class="close" onclick="closeImg()">×</span>
+<img id="popupImg">
+</div>
+
+<script>
+
+function openImg(src){
+document.getElementById("popup").style.display="flex";
+document.getElementById("popupImg").src=src;
+}
+
+function closeImg(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
