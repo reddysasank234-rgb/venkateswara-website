@@ -9,7 +9,6 @@
 <body>
 
 <header>
-
 <h1>Lord Venkateswara</h1>
 
 <nav>
@@ -58,7 +57,7 @@ let current = 0;
 function openImage(index){
 current = index;
 document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=images[current];
+document.getElementById("lightbox-img").src = images[current];
 }
 
 function closeImage(){
@@ -70,7 +69,7 @@ current++;
 if(current >= images.length){
 current = 0;
 }
-document.getElementById("lightbox-img").src=images[current];
+document.getElementById("lightbox-img").src = images[current];
 }
 
 function prevImage(){
@@ -78,7 +77,7 @@ current--;
 if(current < 0){
 current = images.length - 1;
 }
-document.getElementById("lightbox-img").src=images[current];
+document.getElementById("lightbox-img").src = images[current];
 }
 
 </script>
