@@ -1,10 +1,7 @@
-/* GENERAL */
-
 body{
 font-family: Arial, sans-serif;
 margin:0;
 background:#f4f1e8;
-text-align:center;
 }
 
 /* HEADER */
@@ -12,12 +9,14 @@ text-align:center;
 header{
 background:#8B0000;
 color:white;
-padding:20px 0;
+text-align:center;
+padding:20px;
 }
 
 /* NAVIGATION */
 
 nav{
+text-align:center;
 margin-top:10px;
 }
 
@@ -28,7 +27,6 @@ margin:0 15px;
 font-size:18px;
 padding:8px 16px;
 border-radius:5px;
-display:inline-block;
 }
 
 nav a:hover{
@@ -39,31 +37,23 @@ color:black;
 /* PAGE TITLE */
 
 .page-title{
+text-align:center;
 margin-top:30px;
 font-size:32px;
 color:#8B0000;
 }
 
-/* CONTENT SECTION */
+/* CONTENT */
 
-section{
+.content{
 width:80%;
 max-width:900px;
 margin:auto;
+text-align:center;
 padding:20px;
 }
 
-/* HOME IMAGE */
-
-.home-image{
-max-width:350px;
-width:90%;
-border-radius:10px;
-margin-top:20px;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
-}
-
-/* GALLERY GRID */
+/* GALLERY */
 
 .gallery{
 display:grid;
@@ -79,7 +69,6 @@ width:100%;
 border-radius:10px;
 cursor:pointer;
 transition:0.3s;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 .gallery img:hover{
@@ -101,43 +90,38 @@ align-items:center;
 z-index:1000;
 }
 
-/* LIGHTBOX IMAGE */
-
 .lightbox img{
 max-width:80%;
 max-height:80%;
 border-radius:10px;
 }
 
-/* CLOSE BUTTON */
+/* CLOSE */
 
 .close{
 position:absolute;
-top:25px;
-right:35px;
+top:30px;
+right:40px;
 font-size:30px;
 background:#ffcc00;
 color:black;
-padding:8px 14px;
+padding:10px 15px;
 border-radius:50%;
 cursor:pointer;
-font-weight:bold;
 }
 
-/* PREV & NEXT BUTTONS */
+/* PREV NEXT */
 
-.prev, .next{
+.prev,.next{
 position:absolute;
 top:50%;
 transform:translateY(-50%);
-font-size:30px;
+font-size:35px;
 background:#ffcc00;
 color:black;
 padding:12px 18px;
 border-radius:50%;
 cursor:pointer;
-font-weight:bold;
-user-select:none;
 }
 
 .prev{
@@ -148,26 +132,17 @@ left:30px;
 right:30px;
 }
 
-/* HOVER EFFECT */
-
-.prev:hover,
-.next:hover,
-.close:hover{
-background:#ffd633;
-}
-
 /* MOBILE */
 
 @media (max-width:600px){
 
 nav a{
 display:block;
-margin:10px auto;
+margin:10px 0;
 }
 
 .gallery{
 grid-template-columns:1fr;
-width:90%;
 }
 
 }
