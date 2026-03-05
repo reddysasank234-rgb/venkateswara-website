@@ -13,7 +13,7 @@ padding:20px;
 
 nav{
 background:#d4af37;
-padding:10px;
+padding:12px;
 }
 
 nav a{
@@ -21,6 +21,15 @@ margin:15px;
 text-decoration:none;
 color:black;
 font-weight:bold;
+}
+
+.hero{
+background-image:url("https://upload.wikimedia.org/wikipedia/commons/6/6f/Tirumala_Temple.jpg");
+background-size:cover;
+background-position:center;
+color:white;
+padding:120px 20px;
+font-size:22px;
 }
 
 section{
@@ -39,6 +48,7 @@ border-radius:10px;
 
 iframe{
 margin-top:20px;
+max-width:100%;
 }
 
 footer{
