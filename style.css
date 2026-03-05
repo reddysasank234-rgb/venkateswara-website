@@ -1,0 +1,26 @@
+body {
+    font-family: Arial;
+    background-color: #f4f1e6;
+    text-align: center;
+}
+
+header {
+    background-color: #7b1113;
+    color: white;
+    padding: 20px;
+}
+
+.about, .gallery {
+    margin: 30px;
+}
+
+img {
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+footer {
+    background-color: #7b1113;
+    color: white;
+    padding: 10px;
+}
