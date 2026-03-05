@@ -25,26 +25,60 @@
 
 <section class="gallery">
 
-<img src="images/IMG_5395.JPG.jpeg" onclick="openImage(this.src)">
-<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg" onclick="openImage(this.src)">
-<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg" onclick="openImage(this.src)">
-<img src="images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png" onclick="openImage(this.src)">
+<img src="images/IMG_5395.JPG.jpeg" onclick="openImage(0)">
+<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg" onclick="openImage(1)">
+<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg" onclick="openImage(2)">
+<img src="images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png" onclick="openImage(3)">
 
 </section>
 
-<div class="lightbox" id="lightbox" onclick="closeImage()">
+<div class="lightbox" id="lightbox">
+
+<span class="close" onclick="closeImage()">✖</span>
+
+<span class="prev" onclick="prevImage()">❮</span>
+
 <img id="lightbox-img">
+
+<span class="next" onclick="nextImage()">❯</span>
+
 </div>
 
 <script>
 
-function openImage(src){
+let images = [
+"images/IMG_5395.JPG.jpeg",
+"images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg",
+"images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg",
+"images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png"
+];
+
+let current = 0;
+
+function openImage(index){
+current = index;
 document.getElementById("lightbox").style.display="flex";
-document.getElementById("lightbox-img").src=src;
+document.getElementById("lightbox-img").src=images[current];
 }
 
 function closeImage(){
 document.getElementById("lightbox").style.display="none";
+}
+
+function nextImage(){
+current++;
+if(current >= images.length){
+current = 0;
+}
+document.getElementById("lightbox-img").src=images[current];
+}
+
+function prevImage(){
+current--;
+if(current < 0){
+current = images.length - 1;
+}
+document.getElementById("lightbox-img").src=images[current];
 }
 
 </script>
