@@ -29,7 +29,6 @@ background-size:cover;
 background-position:center;
 color:white;
 padding:120px 20px;
-font-size:22px;
 }
 
 section{
@@ -44,16 +43,4 @@ img{
 width:250px;
 margin:10px;
 border-radius:10px;
-}
-
-iframe{
-margin-top:20px;
-max-width:100%;
-}
-
-footer{
-background:#7b1113;
-color:white;
-padding:15px;
-margin-top:40px;
 }
