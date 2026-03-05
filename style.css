@@ -1,7 +1,10 @@
+/* GENERAL */
+
 body{
 font-family: Arial, sans-serif;
 margin:0;
 background:#f4f1e8;
+text-align:center;
 }
 
 /* HEADER */
@@ -9,14 +12,16 @@ background:#f4f1e8;
 header{
 background:#8B0000;
 color:white;
-text-align:center;
-padding:20px;
+padding:20px 0;
+}
+
+header h1{
+margin:0;
 }
 
 /* NAVIGATION */
 
 nav{
-text-align:center;
 margin-top:10px;
 }
 
@@ -27,6 +32,7 @@ margin:0 15px;
 font-size:18px;
 padding:8px 16px;
 border-radius:5px;
+display:inline-block;
 }
 
 nav a:hover{
@@ -37,7 +43,6 @@ color:black;
 /* PAGE TITLE */
 
 .page-title{
-text-align:center;
 margin-top:30px;
 font-size:32px;
 color:#8B0000;
@@ -49,8 +54,17 @@ color:#8B0000;
 width:80%;
 max-width:900px;
 margin:auto;
-text-align:center;
 padding:20px;
+}
+
+/* HOME IMAGE */
+
+.home-image{
+max-width:350px;
+width:90%;
+border-radius:10px;
+margin-top:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 /* GALLERY */
@@ -69,6 +83,7 @@ width:100%;
 border-radius:10px;
 cursor:pointer;
 transition:0.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 .gallery img:hover{
@@ -79,16 +94,18 @@ transform:scale(1.05);
 
 .lightbox{
 position:fixed;
-top:0;
+top:120px;              /* keeps header visible */
 left:0;
 width:100%;
-height:100%;
+height:calc(100% - 120px);
 background:rgba(0,0,0,0.95);
 display:none;
 justify-content:center;
 align-items:center;
-z-index:1000;
+z-index:999;
 }
+
+/* LIGHTBOX IMAGE */
 
 .lightbox img{
 max-width:80%;
@@ -96,21 +113,22 @@ max-height:80%;
 border-radius:10px;
 }
 
-/* CLOSE */
+/* CLOSE BUTTON */
 
 .close{
 position:absolute;
-top:30px;
-right:40px;
+top:20px;
+right:30px;
 font-size:30px;
 background:#ffcc00;
 color:black;
-padding:10px 15px;
+padding:8px 14px;
 border-radius:50%;
 cursor:pointer;
+font-weight:bold;
 }
 
-/* PREV NEXT */
+/* NEXT / PREVIOUS */
 
 .prev,.next{
 position:absolute;
@@ -122,6 +140,8 @@ color:black;
 padding:12px 18px;
 border-radius:50%;
 cursor:pointer;
+font-weight:bold;
+user-select:none;
 }
 
 .prev{
@@ -132,17 +152,31 @@ left:30px;
 right:30px;
 }
 
+/* HOVER */
+
+.prev:hover,
+.next:hover,
+.close:hover{
+background:#ffd633;
+}
+
 /* MOBILE */
 
 @media (max-width:600px){
 
 nav a{
 display:block;
-margin:10px 0;
+margin:10px auto;
 }
 
 .gallery{
 grid-template-columns:1fr;
+width:90%;
+}
+
+.lightbox img{
+max-width:95%;
+max-height:70%;
 }
 
 }
