@@ -1,15 +1,28 @@
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
 margin:0;
 background:#f5f2e9;
 text-align:center;
 }
+
+/* HEADER */
 
 header{
 background:#7b1113;
 color:white;
 padding:20px;
 }
+
+header h1{
+margin:0;
+font-size:32px;
+}
+
+header p{
+margin:5px 0 0;
+}
+
+/* NAVIGATION */
 
 nav{
 background:#d4af37;
@@ -21,7 +34,23 @@ margin:15px;
 text-decoration:none;
 color:black;
 font-weight:bold;
+font-size:16px;
 }
+
+nav a:hover{
+color:#7b1113;
+}
+
+/* PAGE TITLE */
+
+.page-title{
+background:#eeeeee;
+padding:15px;
+font-size:22px;
+font-weight:bold;
+}
+
+/* HERO SECTION (HOME PAGE) */
 
 .hero{
 background-image:url("https://upload.wikimedia.org/wikipedia/commons/6/6f/Tirumala_Temple.jpg");
@@ -29,18 +58,65 @@ background-size:cover;
 background-position:center;
 color:white;
 padding:120px 20px;
+font-size:22px;
 }
 
+/* CONTENT SECTIONS */
+
 section{
-margin:40px;
-padding:20px;
+margin:40px auto;
+padding:25px;
 background:white;
 border-radius:10px;
+width:80%;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
+
+/* IMAGES */
 
 img{
 width:250px;
 margin:10px;
 border-radius:10px;
+}
+
+/* VIDEO */
+
+iframe{
+margin-top:20px;
+max-width:100%;
+border-radius:8px;
+}
+
+/* FOOTER */
+
+footer{
+background:#7b1113;
+color:white;
+padding:15px;
+margin-top:40px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:768px){
+
+nav a{
+display:block;
+margin:10px 0;
+}
+
+section{
+width:90%;
+}
+
+.hero{
+padding:80px 20px;
+font-size:18px;
+}
+
+img{
+width:90%;
+}
+
 }
