@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Gallery - Lord Venkateswara</title>
-    <link rel="stylesheet" href="style.css">
+<title>Gallery - Lord Venkateswara</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>Lord Venkateswara</h1>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="history.html">History</a>
-        <a href="bhajans.html">Bhajans</a>
-        <a href="gallery.html">Gallery</a>
-    </nav>
+<h1>Lord Venkateswara</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="history.html">History</a>
+<a href="bhajans.html">Bhajans</a>
+<a href="gallery.html">Gallery</a>
+</nav>
+
 </header>
 
 <h2 class="page-title">Gallery</h2>
 
 <section class="gallery">
 
-<img src="images/IMG_5395.JPG.jpeg">
-
-<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg">
-
-<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg">
-
-<img src="images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png">
+<img src="images/IMG_5395.JPG.jpeg" onclick="openImage(this.src)">
+<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg" onclick="openImage(this.src)">
+<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg" onclick="openImage(this.src)">
+<img src="images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png" onclick="openImage(this.src)">
 
 </section>
+
+<div class="lightbox" id="lightbox" onclick="closeImage()">
+<img id="lightbox-img">
+</div>
+
+<script>
+
+function openImage(src){
+document.getElementById("lightbox").style.display="flex";
+document.getElementById("lightbox-img").src=src;
+}
+
+function closeImage(){
+document.getElementById("lightbox").style.display="none";
+}
+
+</script>
 
 </body>
 </html>
