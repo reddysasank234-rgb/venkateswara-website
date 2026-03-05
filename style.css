@@ -54,13 +54,14 @@ width:100%;
 border-radius:10px;
 cursor:pointer;
 transition:0.3s;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 .gallery img:hover{
 transform:scale(1.05);
 }
 
-/* LIGHTBOX BACKGROUND */
+/* LIGHTBOX */
 
 .lightbox{
 position:fixed;
@@ -81,35 +82,70 @@ z-index:1000;
 max-width:80%;
 max-height:80%;
 border-radius:10px;
+box-shadow:0 0 20px rgba(0,0,0,0.8);
 }
 
 /* CLOSE BUTTON */
 
 .close{
 position:absolute;
-top:30px;
-right:40px;
-font-size:35px;
-color:white;
+top:25px;
+right:35px;
+font-size:30px;
+background:#ffcc00;
+color:black;
+padding:8px 14px;
+border-radius:50%;
 cursor:pointer;
+font-weight:bold;
+box-shadow:0 0 10px rgba(0,0,0,0.6);
 }
 
-/* NEXT & PREVIOUS */
+/* NEXT & PREVIOUS BUTTONS */
 
 .prev, .next{
 position:absolute;
 top:50%;
-font-size:50px;
-color:white;
+transform:translateY(-50%);
+font-size:30px;
+background:#ffcc00;
+color:black;
+padding:12px 18px;
+border-radius:50%;
 cursor:pointer;
-padding:10px;
+font-weight:bold;
+box-shadow:0 0 10px rgba(0,0,0,0.6);
 user-select:none;
 }
 
 .prev{
-left:30px;
+left:20px;
 }
 
 .next{
-right:30px;
+right:20px;
+}
+
+/* HOVER EFFECT */
+
+.prev:hover,
+.next:hover,
+.close:hover{
+background:#ffd633;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:600px){
+
+.gallery{
+grid-template-columns:1fr;
+padding:20px;
+}
+
+.lightbox img{
+max-width:95%;
+max-height:75%;
+}
+
 }
