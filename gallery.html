@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Gallery - Lord Venkateswara</title>
+<title>Gallery</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
+
 <h1>Lord Venkateswara</h1>
 
 <nav>
@@ -21,64 +23,18 @@
 
 <h2 class="page-title">Gallery</h2>
 
-<div class="gallery-container">
+<div class="content">
 
-<img src="images/IMG_5395.JPG.jpeg" onclick="openModal(this.src)">
-<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg" onclick="openModal(this.src)">
-<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg" onclick="openModal(this.src)">
-<img src="images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png" onclick="openModal(this.src)">
+<div class="gallery">
 
-</div>
-
-<!-- IMAGE POPUP -->
-
-<div id="imageModal" class="modal">
-
-<span class="close" onclick="closeModal()">×</span>
-
-<img class="modal-content" id="modalImg">
-
-<a class="prev" onclick="changeImage(-1)">❮</a>
-<a class="next" onclick="changeImage(1)">❯</a>
+<img src="images/IMG_5395.JPG.jpeg">
+<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg">
+<img src="images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg">
+<img src="images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png">
 
 </div>
 
-<script>
-
-let images = [
-"images/IMG_5395.JPG.jpeg",
-"images/WhatsApp Image 2025-11-13 at 10.12.06_c4541afc.jpg",
-"images/WhatsApp Image 2025-11-13 at 10.12.06_f1b13771.jpg",
-"images/WhatsApp_Image_2025-05-11_at_19.16.44_6d862235-removebg-preview.png"
-];
-
-let currentIndex = 0;
-
-function openModal(src){
-document.getElementById("imageModal").style.display="block";
-document.getElementById("modalImg").src=src;
-currentIndex = images.indexOf(src);
-}
-
-function closeModal(){
-document.getElementById("imageModal").style.display="none";
-}
-
-function changeImage(direction){
-currentIndex += direction;
-
-if(currentIndex < 0){
-currentIndex = images.length -1;
-}
-
-if(currentIndex >= images.length){
-currentIndex = 0;
-}
-
-document.getElementById("modalImg").src = images[currentIndex];
-}
-
-</script>
+</div>
 
 </body>
 </html>
