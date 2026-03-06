@@ -1,6 +1,9 @@
+/* BODY BACKGROUND */
+
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
+    text-align:center;
 
     background-image:url("images/tirumala-bg.jpg");
     background-size:cover;
@@ -13,8 +16,7 @@ body{
 header{
     background:#8B0000;
     color:white;
-    text-align:center;
-    padding:20px 0;
+    padding:25px 0 15px 0;
 }
 
 header h1{
@@ -31,7 +33,7 @@ nav{
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 15px;
+    margin:0 18px;
     font-size:18px;
     font-weight:bold;
 }
@@ -43,42 +45,43 @@ nav a:hover{
 /* PAGE TITLE */
 
 .page-title{
-    text-align:center;
-    font-size:36px;
-    margin-top:30px;
+    font-size:34px;
     color:#8B0000;
+    margin-top:35px;
 }
 
 /* CONTENT BOX */
 
 .content{
-    background:rgba(255,255,255,0.9);
-    max-width:1000px;
+    width:900px;
     margin:30px auto;
-    padding:30px;
+    padding:25px;
+    background:rgba(255,255,255,0.9);
     border-radius:10px;
 }
 
-/* GALLERY */
+/* GALLERY GRID */
 
 .gallery{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
     gap:20px;
+    justify-items:center;
 }
+
+/* GALLERY IMAGES */
 
 .gallery img{
     width:250px;
-    height:180px;
+    height:170px;
     object-fit:cover;
-    border-radius:10px;
+    border-radius:8px;
     cursor:pointer;
     transition:transform 0.3s;
 }
 
 .gallery img:hover{
-    transform:scale(1.05);
+    transform:scale(1.08);
 }
 
 /* IMAGE VIEWER */
@@ -100,26 +103,34 @@ nav a:hover{
     max-height:80%;
 }
 
+/* CLOSE BUTTON */
+
 .close-btn{
     position:absolute;
-    top:30px;
+    top:25px;
     right:40px;
-    font-size:40px;
+    font-size:45px;
     color:white;
     cursor:pointer;
 }
 
+/* NEXT BUTTON */
+
 .next-btn{
     position:absolute;
     right:40px;
+    top:50%;
     font-size:50px;
     color:white;
     cursor:pointer;
 }
 
+/* PREVIOUS BUTTON */
+
 .prev-btn{
     position:absolute;
     left:40px;
+    top:50%;
     font-size:50px;
     color:white;
     cursor:pointer;
