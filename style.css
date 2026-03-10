@@ -9,13 +9,27 @@ font-family:Arial, Helvetica, sans-serif;
 
 body{
 background-image:url("images/tirumala-bg.jpg");
-background-size:contain;   /* keeps original image size */
+background-size:contain;
 background-position:center;
 background-repeat:no-repeat;
 background-attachment:fixed;
-background-color:black;   /* fills empty space */
+background-color:black;
 text-align:center;
 padding-top:120px;
+position:relative;
+}
+
+/* DARK OVERLAY FOR BETTER TEXT VISIBILITY */
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.35);
+z-index:-1;
 }
 
 /* HEADER */
