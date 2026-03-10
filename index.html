@@ -9,6 +9,7 @@
 <body>
 
 <header>
+
 <h1>Lord Venkateswara</h1>
 
 <nav>
@@ -17,26 +18,55 @@
 <a href="bhajans.html">Sankeerthanas</a>
 <a href="gallery.html">Gallery</a>
 </nav>
+
 </header>
 
 <h2 class="page-title">Home</h2>
 
 <div class="content">
 
-<h3>Govinda Govinda</h3>
+<h2>Govinda Govinda</h2>
 
-<p>
-Welcome to the divine website of Lord Venkateswara.
-Lord Venkateswara, also known as Balaji, Srinivasa and Govinda,
-is worshipped at Tirumala Tirupati temple.
-</p>
+<p>Welcome to the sacred website dedicated to Lord Venkateswara of Tirumala.</p>
 
-<p>
-Millions of devotees visit Tirumala every year to seek blessings
-from Lord Venkateswara.
-</p>
+<!-- IMAGE SLIDER -->
+
+<div class="slider">
+
+<img src="images/tirumala1.jpg" class="slide">
+<img src="images/tirumala2.jpg" class="slide">
+<img src="images/tirumala3.jpg" class="slide">
 
 </div>
+
+</div>
+
+<script>
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides(){
+
+let slides = document.getElementsByClassName("slide");
+
+for(let i=0;i<slides.length;i++){
+slides[i].style.display="none";
+}
+
+slideIndex++;
+
+if(slideIndex>slides.length){
+slideIndex=1;
+}
+
+slides[slideIndex-1].style.display="block";
+
+setTimeout(showSlides,3000);
+
+}
+
+</script>
 
 </body>
 </html>
