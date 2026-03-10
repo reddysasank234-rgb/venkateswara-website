@@ -1,4 +1,5 @@
 /* RESET */
+
 *{
 margin:0;
 padding:0;
@@ -9,117 +10,83 @@ font-family:Arial, Helvetica, sans-serif;
 /* BODY */
 
 body{
-
-background-image:url("tirumala.jpg");
-
-background-size:90%;   /* reduced zoom */
-
+background-image:url("images/tirumala-bg.jpg");
+background-size:90%;
 background-position:center;
-
-background-attachment:fixed;
-
 background-repeat:no-repeat;
-
-color:white;
-
+background-attachment:fixed;
 text-align:center;
-
 }
 
 /* HEADER */
 
 header{
+background:#8B0000;
+color:white;
+padding:25px;
+}
 
-background:rgba(0,0,0,0.7);
+header h1{
+font-size:38px;
+}
 
-padding:20px;
+/* NAVIGATION */
 
-font-size:28px;
+nav{
+margin-top:15px;
+}
 
+nav a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-size:18px;
 font-weight:bold;
-
 }
 
-/* MAIN CONTAINER */
-
-.container{
-
-padding:20px;
-
+nav a:hover{
+text-decoration:underline;
 }
 
-/* MAIN BALAJI IMAGE */
+/* PAGE TITLE */
 
-.main-img{
-
-margin-top:20px;
-
+.page-title{
+margin-top:30px;
+font-size:34px;
+color:#8B0000;
 }
 
-.main-img img{
+/* CONTENT */
 
-width:auto;            /* original size */
-
-max-width:100%;
-
-height:auto;
-
+.content{
+width:1000px;
+margin:30px auto;
+padding:25px;
+background:rgba(255,255,255,0.9);
 border-radius:10px;
-
 }
 
 /* GALLERY */
 
 .gallery{
-
-margin-top:30px;
-
 display:flex;
-
-justify-content:center;
-
-gap:20px;
-
 flex-wrap:wrap;
-
+justify-content:center;
+gap:25px;
 }
 
 /* GALLERY IMAGES */
 
 .gallery img{
-
-max-width:280px;
-
-max-height:350px;
-
+max-width:260px;
+max-height:340px;
 width:auto;
-
 height:auto;
-
 border-radius:10px;
-
 cursor:pointer;
-
 transition:transform 0.3s;
-
 }
 
 .gallery img:hover{
-
 transform:scale(1.05);
-
-}
-
-/* FOOTER */
-
-footer{
-
-margin-top:40px;
-
-background:rgba(0,0,0,0.7);
-
-padding:15px;
-
-font-size:14px;
-
 }
