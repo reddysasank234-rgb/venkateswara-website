@@ -5,6 +5,8 @@ box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
 }
 
+/* BACKGROUND */
+
 body{
 background-image:url("images/tirumala-bg2.jpg");
 background-size:cover;
@@ -13,6 +15,8 @@ background-repeat:no-repeat;
 background-attachment:fixed;
 text-align:center;
 }
+
+/* HEADER */
 
 header{
 background:#8B0000;
@@ -23,6 +27,8 @@ padding:25px;
 header h1{
 font-size:38px;
 }
+
+/* NAVIGATION */
 
 nav{
 margin-top:15px;
@@ -40,11 +46,15 @@ nav a:hover{
 text-decoration:underline;
 }
 
+/* PAGE TITLE */
+
 .page-title{
 margin-top:30px;
 font-size:34px;
 color:#8B0000;
 }
+
+/* CONTENT BOX */
 
 .content{
 width:1000px;
@@ -53,6 +63,8 @@ padding:25px;
 background:rgba(255,255,255,0.9);
 border-radius:10px;
 }
+
+/* GALLERY */
 
 .gallery{
 display:flex;
@@ -75,7 +87,7 @@ transition:transform 0.3s;
 transform:scale(1.05);
 }
 
-/* SANKEERTHANAS VIDEOS */
+/* SANKEERTHANAS VIDEO GRID */
 
 .video-section{
 display:flex;
@@ -83,4 +95,14 @@ flex-wrap:wrap;
 justify-content:center;
 gap:25px;
 margin-top:20px;
+}
+
+.video{
+width:420px;
+}
+
+.video iframe{
+width:100%;
+height:236px;
+border-radius:8px;
 }
