@@ -74,3 +74,13 @@ transition:transform 0.3s;
 .gallery img:hover{
 transform:scale(1.05);
 }
+
+/* SANKEERTHANAS VIDEOS */
+
+.video-section{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:20px;
+}
