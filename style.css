@@ -64,15 +64,13 @@ margin-top:40px;
 }
 
 
-/* Floating audio */
+/* AUDIO PLAYER */
 
 .audio-floating{
 
 position:fixed;
-
 bottom:25px;
 right:25px;
-
 z-index:999;
 
 }
@@ -96,9 +94,6 @@ box-shadow:0 4px 10px rgba(0,0,0,0.4);
 
 }
 
-
-/* menu */
-
 .audio-menu{
 
 display:none;
@@ -108,7 +103,7 @@ position:absolute;
 bottom:70px;
 right:0;
 
-width:200px;
+width:210px;
 
 background:white;
 
@@ -120,10 +115,15 @@ overflow:hidden;
 
 }
 
+
 .audio-menu button,
 .audio-menu a{
 
-display:block;
+display:flex;
+
+align-items:center;
+
+gap:10px;
 
 width:100%;
 
@@ -141,7 +141,10 @@ text-decoration:none;
 
 color:black;
 
+font-size:15px;
+
 }
+
 
 .audio-menu button:hover,
 .audio-menu a:hover{
@@ -151,7 +154,12 @@ background:#f1f1f1;
 }
 
 
-/* playback speed submenu */
+.material-icons{
+
+font-size:20px;
+
+}
+
 
 .speed-menu{
 
