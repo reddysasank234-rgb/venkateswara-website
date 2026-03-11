@@ -1,6 +1,15 @@
+function toggleMenu(){
+
+let menu=document.getElementById("audioMenu");
+
+menu.style.display =
+menu.style.display==="block" ? "none":"block";
+
+}
+
 function toggleAudio(){
 
-let audio = document.getElementById("chant");
+let audio=document.getElementById("chant");
 
 if(audio.paused){
 audio.play();
@@ -10,21 +19,27 @@ audio.pause();
 
 }
 
-function toggleMenu(){
+function toggleMute(){
 
-let menu = document.getElementById("menu");
+let audio=document.getElementById("chant");
 
-if(menu.style.display === "block"){
-menu.style.display = "none";
-}else{
-menu.style.display = "block";
+audio.muted=!audio.muted;
+
 }
+
+function toggleSpeed(){
+
+let speed=document.getElementById("speedMenu");
+
+speed.style.display =
+speed.style.display==="block" ? "none":"block";
 
 }
 
 function setSpeed(speed){
 
-let audio = document.getElementById("chant");
-audio.playbackRate = speed;
+let audio=document.getElementById("chant");
+
+audio.playbackRate=speed;
 
 }
