@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
 <title>Lord Venkateswara</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- Google Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 
@@ -43,7 +48,7 @@ Welcome to the divine website dedicated to Lord Venkateswara of Tirumala.
 </footer>
 
 
-<!-- Floating Audio Player -->
+<!-- AUDIO PLAYER -->
 
 <div class="audio-floating">
 
@@ -51,13 +56,37 @@ Welcome to the divine website dedicated to Lord Venkateswara of Tirumala.
 
 <div class="audio-menu" id="audioMenu">
 
-<button onclick="toggleAudio()">▶ Play / Pause</button>
+<button onclick="toggleAudio()">
 
-<a href="audio/om-namo-venkatesaya.mp3" download>⬇ Download</a>
+<span class="material-icons">play_arrow</span>
+Play
 
-<button onclick="toggleMute()">🔇 Mute</button>
+</button>
 
-<button onclick="toggleSpeed()">⏱ Playback Speed</button>
+
+<a href="audio/om-namo-venkatesaya.mp3" download>
+
+<span class="material-icons">download</span>
+Download
+
+</a>
+
+
+<button onclick="toggleMute()">
+
+<span class="material-icons">volume_up</span>
+Mute
+
+</button>
+
+
+<button onclick="toggleSpeed()">
+
+<span class="material-icons">speed</span>
+Playback speed
+
+</button>
+
 
 <div class="speed-menu" id="speedMenu">
 
@@ -78,6 +107,7 @@ Welcome to the divine website dedicated to Lord Venkateswara of Tirumala.
 <source src="audio/om-namo-venkatesaya.mp3">
 
 </audio>
+
 
 <script src="script.js"></script>
 
