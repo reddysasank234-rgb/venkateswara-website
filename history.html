@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-<title>History</title>
+<title>Temple History</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-
-<h1>🏛 Lord Venkateswara</h1>
-<p>Govinda Govinda 🙏</p>
+<h1>Lord Venkateswara</h1>
+<p>Govinda Govinda</p>
 
 <nav>
 <a href="index.html">Home</a>
@@ -20,16 +18,14 @@
 <a href="bhajans.html">Bhajans</a>
 <a href="gallery.html">Gallery</a>
 </nav>
-
 </header>
 
 <div class="content">
 
-<h2 class="page-title">History</h2>
+<h2>Tirumala Temple History</h2>
 
 <p>
 The Tirumala temple is one of the most sacred temples in India.
-It is dedicated to Lord Venkateswara.
 </p>
 
 </div>
@@ -38,26 +34,29 @@ It is dedicated to Lord Venkateswara.
 
 <div class="audio-player">
 
-<button onclick="toggleAudio()">⏯ Play / Pause</button>
+<button onclick="toggleAudio()">⏯</button>
 
-<button onclick="showMenu()">⋮</button>
+<button onclick="toggleMenu()">⋮</button>
 
 <div id="menu">
+
 <a href="audio/om-namo-venkatesaya.mp3" download>Download</a>
+
 <button onclick="setSpeed(0.75)">0.75x</button>
 <button onclick="setSpeed(1)">1x</button>
 <button onclick="setSpeed(1.25)">1.25x</button>
 <button onclick="setSpeed(1.5)">1.5x</button>
-</div>
 
 </div>
 
-<p>© 2026 Lord Venkateswara Devotional Website</p>
+</div>
+
+<p>© 2026 Lord Venkateswara Website</p>
 
 </footer>
 
 <audio id="chant" autoplay loop>
-<source src="audio/om-namo-venkatesaya.mp3" type="audio/mp3">
+<source src="audio/om-namo-venkatesaya.mp3">
 </audio>
 
 <script src="script.js"></script>
