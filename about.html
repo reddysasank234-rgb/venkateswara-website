@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>About</title>
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header>
+
 <h1>Lord Venkateswara</h1>
 <p>Govinda Govinda</p>
 
 <nav>
+
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="history.html">History</a>
 <a href="bhajans.html">Bhajans</a>
 <a href="gallery.html">Gallery</a>
+
 </nav>
+
 </header>
 
 <div class="content">
@@ -32,15 +38,25 @@ Lord Venkateswara is a form of Lord Vishnu worshipped in Tirumala.
 
 <footer>
 
-<div class="audio-player">
+<p>© 2026 Lord Venkateswara Website</p>
 
-<button onclick="toggleAudio()">⏯</button>
+</footer>
 
-<button onclick="toggleMenu()">⋮</button>
+<div class="audio-floating">
 
-<div id="menu">
+<button class="audio-btn" onclick="toggleMenu()">⋮</button>
 
-<a href="audio/om-namo-venkatesaya.mp3" download>Download</a>
+<div class="audio-menu" id="audioMenu">
+
+<button onclick="toggleAudio()">▶ Play / Pause</button>
+
+<a href="audio/om-namo-venkatesaya.mp3" download>⬇ Download</a>
+
+<button onclick="toggleMute()">🔇 Mute</button>
+
+<button onclick="toggleSpeed()">⏱ Playback Speed</button>
+
+<div class="speed-menu" id="speedMenu">
 
 <button onclick="setSpeed(0.75)">0.75x</button>
 <button onclick="setSpeed(1)">1x</button>
@@ -51,12 +67,12 @@ Lord Venkateswara is a form of Lord Vishnu worshipped in Tirumala.
 
 </div>
 
-<p>© 2026 Lord Venkateswara Website</p>
-
-</footer>
+</div>
 
 <audio id="chant" autoplay loop>
+
 <source src="audio/om-namo-venkatesaya.mp3">
+
 </audio>
 
 <script src="script.js"></script>
