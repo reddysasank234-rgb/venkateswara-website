@@ -8,9 +8,8 @@ background-size:cover;
 background-position:center;
 background-attachment:fixed;
 
-text-align:center;
-
 padding-top:150px;
+text-align:center;
 
 }
 
@@ -46,28 +45,12 @@ font-weight:bold;
 width:900px;
 margin:auto;
 
-background:rgba(255,255,255,0.85);
+background:rgba(255,255,255,0.9);
 
 padding:25px;
 margin-top:40px;
 
 border-radius:10px;
-
-}
-
-.gallery{
-
-display:flex;
-gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-
-}
-
-.gallery img{
-
-width:250px;
-border-radius:8px;
 
 }
 
@@ -80,18 +63,100 @@ margin-top:40px;
 
 }
 
-.audio-player button{
 
-padding:8px 14px;
-margin:5px;
-background:gold;
-border:none;
-cursor:pointer;
+/* Floating audio */
+
+.audio-floating{
+
+position:fixed;
+
+bottom:25px;
+right:25px;
+
+z-index:999;
 
 }
 
-#menu{
+.audio-btn{
+
+width:55px;
+height:55px;
+
+border-radius:50%;
+
+border:none;
+
+font-size:24px;
+
+background:#eeeeee;
+
+cursor:pointer;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
+
+}
+
+
+/* menu */
+
+.audio-menu{
 
 display:none;
+
+position:absolute;
+
+bottom:70px;
+right:0;
+
+width:200px;
+
+background:white;
+
+border-radius:8px;
+
+box-shadow:0 4px 12px rgba(0,0,0,0.4);
+
+overflow:hidden;
+
+}
+
+.audio-menu button,
+.audio-menu a{
+
+display:block;
+
+width:100%;
+
+padding:12px;
+
+border:none;
+
+background:white;
+
+text-align:left;
+
+cursor:pointer;
+
+text-decoration:none;
+
+color:black;
+
+}
+
+.audio-menu button:hover,
+.audio-menu a:hover{
+
+background:#f1f1f1;
+
+}
+
+
+/* playback speed submenu */
+
+.speed-menu{
+
+display:none;
+
+border-top:1px solid #ddd;
 
 }
