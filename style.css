@@ -94,6 +94,9 @@ box-shadow:0 4px 10px rgba(0,0,0,0.4);
 
 }
 
+
+/* MENU */
+
 .audio-menu{
 
 display:none;
@@ -103,7 +106,7 @@ position:absolute;
 bottom:70px;
 right:0;
 
-width:210px;
+width:220px;
 
 background:white;
 
@@ -116,24 +119,21 @@ overflow:hidden;
 }
 
 
+/* MENU ITEMS */
+
 .audio-menu button,
 .audio-menu a{
 
 display:flex;
-
 align-items:center;
-
-gap:10px;
 
 width:100%;
 
-padding:12px;
+padding:12px 15px;
 
 border:none;
 
 background:white;
-
-text-align:left;
 
 cursor:pointer;
 
@@ -146,6 +146,24 @@ font-size:15px;
 }
 
 
+/* ICON STYLE */
+
+.material-icons{
+
+width:28px;
+font-size:20px;
+
+margin-right:10px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+}
+
+
+/* HOVER */
+
 .audio-menu button:hover,
 .audio-menu a:hover{
 
@@ -154,12 +172,7 @@ background:#f1f1f1;
 }
 
 
-.material-icons{
-
-font-size:20px;
-
-}
-
+/* SPEED SUBMENU */
 
 .speed-menu{
 
