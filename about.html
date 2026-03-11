@@ -2,17 +2,14 @@
 <html>
 
 <head>
-<title>About Lord Venkateswara</title>
+<title>About</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<audio autoplay loop>
-<source src="audio/om-namo-venkatesaya.mp3" type="audio/mp3">
-</audio>
-
 <header>
+
 <h1>🏛 Lord Venkateswara</h1>
 <p>Govinda Govinda 🙏</p>
 
@@ -23,6 +20,7 @@
 <a href="bhajans.html">Bhajans</a>
 <a href="gallery.html">Gallery</a>
 </nav>
+
 </header>
 
 <div class="content">
@@ -30,16 +28,39 @@
 <h2 class="page-title">About</h2>
 
 <p>
-Lord Venkateswara, also known as Balaji, Srinivasa and Govinda,
-is a form of Lord Vishnu worshipped at Tirumala.
-Millions of devotees visit Tirumala every year.
+Lord Venkateswara is a form of Lord Vishnu worshipped at Tirumala.
+He is also known as Balaji, Srinivasa, and Govinda.
 </p>
 
 </div>
 
 <footer>
+
+<div class="audio-player">
+
+<button onclick="toggleAudio()">⏯ Play / Pause</button>
+
+<button onclick="showMenu()">⋮</button>
+
+<div id="menu">
+<a href="audio/om-namo-venkatesaya.mp3" download>Download</a>
+<button onclick="setSpeed(0.75)">0.75x</button>
+<button onclick="setSpeed(1)">1x</button>
+<button onclick="setSpeed(1.25)">1.25x</button>
+<button onclick="setSpeed(1.5)">1.5x</button>
+</div>
+
+</div>
+
 <p>© 2026 Lord Venkateswara Devotional Website</p>
+
 </footer>
+
+<audio id="chant" autoplay loop>
+<source src="audio/om-namo-venkatesaya.mp3" type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
 
 </body>
 </html>
